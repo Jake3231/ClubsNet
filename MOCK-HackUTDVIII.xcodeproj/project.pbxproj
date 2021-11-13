@@ -7,12 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23A48DF5274065CA009936CC /* ClubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A48DF4274065CA009936CC /* ClubView.swift */; };
+		23A48DF6274065CA009936CC /* ClubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A48DF4274065CA009936CC /* ClubView.swift */; };
+		23A48DF827406979009936CC /* SetupWelcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A48DF727406979009936CC /* SetupWelcome.swift */; };
+		23A48DF927406979009936CC /* SetupWelcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A48DF727406979009936CC /* SetupWelcome.swift */; };
+		23A48DFB27406B8C009936CC /* UserTypeSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A48DFA27406B8C009936CC /* UserTypeSelectorView.swift */; };
+		23A48DFC27406B8C009936CC /* UserTypeSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A48DFA27406B8C009936CC /* UserTypeSelectorView.swift */; };
+		23A48DFE27406F50009936CC /* CategoriesSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A48DFD27406F50009936CC /* CategoriesSelector.swift */; };
+		23A48DFF27406F50009936CC /* CategoriesSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A48DFD27406F50009936CC /* CategoriesSelector.swift */; };
+		23A48E0127407565009936CC /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A48E0027407565009936CC /* Category.swift */; };
+		23A48E0227407565009936CC /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A48E0027407565009936CC /* Category.swift */; };
+		23A48E0427407724009936CC /* FavoriteClubsSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A48E0327407724009936CC /* FavoriteClubsSelector.swift */; };
+		23A48E0527407724009936CC /* FavoriteClubsSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A48E0327407724009936CC /* FavoriteClubsSelector.swift */; };
+		23B74FA7274044470007BE68 /* ClubCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B74FA6274044470007BE68 /* ClubCard.swift */; };
+		23B74FA8274044470007BE68 /* ClubCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B74FA6274044470007BE68 /* ClubCard.swift */; };
+		23B74FAA2740547C0007BE68 /* OrganizationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B74FA92740547C0007BE68 /* OrganizationsController.swift */; };
+		23B74FAB2740547C0007BE68 /* OrganizationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B74FA92740547C0007BE68 /* OrganizationsController.swift */; };
+		23B74FAD274054A70007BE68 /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B74FAC274054A70007BE68 /* Organization.swift */; };
+		23B74FAE274054A70007BE68 /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B74FAC274054A70007BE68 /* Organization.swift */; };
 		23BF674D27403BEC00227C12 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF674C27403BEC00227C12 /* Tests_iOS.swift */; };
 		23BF674F27403BEC00227C12 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF674E27403BEC00227C12 /* Tests_iOSLaunchTests.swift */; };
 		23BF675927403BEC00227C12 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF675827403BEC00227C12 /* Tests_macOS.swift */; };
 		23BF675B27403BEC00227C12 /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF675A27403BEC00227C12 /* Tests_macOSLaunchTests.swift */; };
-		23BF675C27403BEC00227C12 /* MOCK_HackUTDVIIIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF673427403BEA00227C12 /* MOCK_HackUTDVIIIApp.swift */; };
-		23BF675D27403BEC00227C12 /* MOCK_HackUTDVIIIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF673427403BEA00227C12 /* MOCK_HackUTDVIIIApp.swift */; };
+		23BF675C27403BEC00227C12 /* ClubsNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF673427403BEA00227C12 /* ClubsNet.swift */; };
+		23BF675D27403BEC00227C12 /* ClubsNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF673427403BEA00227C12 /* ClubsNet.swift */; };
 		23BF675E27403BEC00227C12 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF673527403BEA00227C12 /* ContentView.swift */; };
 		23BF675F27403BEC00227C12 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF673527403BEA00227C12 /* ContentView.swift */; };
 		23BF676027403BEC00227C12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23BF673627403BEC00227C12 /* Assets.xcassets */; };
@@ -37,10 +55,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		23BF673427403BEA00227C12 /* MOCK_HackUTDVIIIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MOCK_HackUTDVIIIApp.swift; sourceTree = "<group>"; };
+		23A48DF4274065CA009936CC /* ClubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubView.swift; sourceTree = "<group>"; };
+		23A48DF727406979009936CC /* SetupWelcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupWelcome.swift; sourceTree = "<group>"; };
+		23A48DFA27406B8C009936CC /* UserTypeSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTypeSelectorView.swift; sourceTree = "<group>"; };
+		23A48DFD27406F50009936CC /* CategoriesSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesSelector.swift; sourceTree = "<group>"; };
+		23A48E0027407565009936CC /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		23A48E0327407724009936CC /* FavoriteClubsSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteClubsSelector.swift; sourceTree = "<group>"; };
+		23B74FA6274044470007BE68 /* ClubCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubCard.swift; sourceTree = "<group>"; };
+		23B74FA92740547C0007BE68 /* OrganizationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationsController.swift; sourceTree = "<group>"; };
+		23B74FAC274054A70007BE68 /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
+		23BF673427403BEA00227C12 /* ClubsNet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubsNet.swift; sourceTree = "<group>"; };
 		23BF673527403BEA00227C12 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		23BF673627403BEC00227C12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		23BF673B27403BEC00227C12 /* MOCK-HackUTDVIII.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MOCK-HackUTDVIII.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		23BF673B27403BEC00227C12 /* ClubsNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClubsNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23BF674127403BEC00227C12 /* MOCK-HackUTDVIII.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MOCK-HackUTDVIII.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23BF674327403BEC00227C12 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		23BF674827403BEC00227C12 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +110,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23A48E0627407F4A009936CC /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				23B74FA92740547C0007BE68 /* OrganizationsController.swift */,
+				23B74FAC274054A70007BE68 /* Organization.swift */,
+				23A48E0027407565009936CC /* Category.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		23A48E07274082D2009936CC /* Setup */ = {
+			isa = PBXGroup;
+			children = (
+				23A48DF727406979009936CC /* SetupWelcome.swift */,
+				23A48DFA27406B8C009936CC /* UserTypeSelectorView.swift */,
+				23A48DFD27406F50009936CC /* CategoriesSelector.swift */,
+				23A48E0327407724009936CC /* FavoriteClubsSelector.swift */,
+			);
+			path = Setup;
+			sourceTree = "<group>";
+		};
 		23BF672E27403BEA00227C12 = {
 			isa = PBXGroup;
 			children = (
@@ -97,8 +145,12 @@
 		23BF673327403BEA00227C12 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				23BF673427403BEA00227C12 /* MOCK_HackUTDVIIIApp.swift */,
+				23BF673427403BEA00227C12 /* ClubsNet.swift */,
 				23BF673527403BEA00227C12 /* ContentView.swift */,
+				23A48E07274082D2009936CC /* Setup */,
+				23A48E0627407F4A009936CC /* Data */,
+				23B74FA6274044470007BE68 /* ClubCard.swift */,
+				23A48DF4274065CA009936CC /* ClubView.swift */,
 				23BF673627403BEC00227C12 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -107,7 +159,7 @@
 		23BF673C27403BEC00227C12 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				23BF673B27403BEC00227C12 /* MOCK-HackUTDVIII.app */,
+				23BF673B27403BEC00227C12 /* ClubsNet.app */,
 				23BF674127403BEC00227C12 /* MOCK-HackUTDVIII.app */,
 				23BF674827403BEC00227C12 /* Tests iOS.xctest */,
 				23BF675427403BEC00227C12 /* Tests macOS.xctest */,
@@ -158,7 +210,7 @@
 			);
 			name = "MOCK-HackUTDVIII (iOS)";
 			productName = "MOCK-HackUTDVIII (iOS)";
-			productReference = 23BF673B27403BEC00227C12 /* MOCK-HackUTDVIII.app */;
+			productReference = 23BF673B27403BEC00227C12 /* ClubsNet.app */;
 			productType = "com.apple.product-type.application";
 		};
 		23BF674027403BEC00227C12 /* MOCK-HackUTDVIII (macOS) */ = {
@@ -299,8 +351,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23A48DFE27406F50009936CC /* CategoriesSelector.swift in Sources */,
+				23A48E0127407565009936CC /* Category.swift in Sources */,
+				23A48DF5274065CA009936CC /* ClubView.swift in Sources */,
+				23A48DF827406979009936CC /* SetupWelcome.swift in Sources */,
+				23A48DFB27406B8C009936CC /* UserTypeSelectorView.swift in Sources */,
+				23B74FA7274044470007BE68 /* ClubCard.swift in Sources */,
 				23BF675E27403BEC00227C12 /* ContentView.swift in Sources */,
-				23BF675C27403BEC00227C12 /* MOCK_HackUTDVIIIApp.swift in Sources */,
+				23A48E0427407724009936CC /* FavoriteClubsSelector.swift in Sources */,
+				23B74FAA2740547C0007BE68 /* OrganizationsController.swift in Sources */,
+				23B74FAD274054A70007BE68 /* Organization.swift in Sources */,
+				23BF675C27403BEC00227C12 /* ClubsNet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,8 +369,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23A48DFF27406F50009936CC /* CategoriesSelector.swift in Sources */,
+				23A48E0227407565009936CC /* Category.swift in Sources */,
+				23A48DF6274065CA009936CC /* ClubView.swift in Sources */,
+				23A48DF927406979009936CC /* SetupWelcome.swift in Sources */,
+				23A48DFC27406B8C009936CC /* UserTypeSelectorView.swift in Sources */,
+				23B74FA8274044470007BE68 /* ClubCard.swift in Sources */,
 				23BF675F27403BEC00227C12 /* ContentView.swift in Sources */,
-				23BF675D27403BEC00227C12 /* MOCK_HackUTDVIIIApp.swift in Sources */,
+				23A48E0527407724009936CC /* FavoriteClubsSelector.swift in Sources */,
+				23B74FAB2740547C0007BE68 /* OrganizationsController.swift in Sources */,
+				23B74FAE274054A70007BE68 /* Organization.swift in Sources */,
+				23BF675D27403BEC00227C12 /* ClubsNet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,7 +550,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "jakespann.MOCK-HackUTDVIII";
-				PRODUCT_NAME = "MOCK-HackUTDVIII";
+				PRODUCT_NAME = ClubsNet;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -510,7 +580,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "jakespann.MOCK-HackUTDVIII";
-				PRODUCT_NAME = "MOCK-HackUTDVIII";
+				PRODUCT_NAME = ClubsNet;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
