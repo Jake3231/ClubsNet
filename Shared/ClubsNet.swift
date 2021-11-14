@@ -15,7 +15,7 @@ struct ClubsNet: App {
     var body: some Scene {
         WindowGroup {
             if didSetUp {
-                ContentView()
+                MainView()
                     .environmentObject(networkController)
             } else {
                 SetupWelcome(didSetUp: $didSetUp)

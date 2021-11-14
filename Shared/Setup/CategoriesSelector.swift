@@ -23,7 +23,7 @@ struct CategoriesSelector: View {
                 .navigationBarBackButtonHidden(true)
             if !isLoading {
                 ScrollView(.vertical) {
-            LazyVGrid(columns: [GridItem(.flexible(minimum: 25, maximum: 300), spacing: 0), GridItem(.flexible(minimum: 25, maximum: 300), spacing: 0)]) {
+            LazyVGrid(columns: [GridItem(.flexible(minimum: 25, maximum: 300), spacing: 10), GridItem(.flexible(minimum: 25, maximum: 300), spacing: 10)]) {
                 ForEach($comms.categories, id: \.self) { category in
                     CategoryBox(title: category.wrappedValue, selectedCategories: $SelectedCategories)
                 }
@@ -55,21 +55,23 @@ struct CategoryBox: View {
     
     var body: some View {
         Text(title)
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
             .foregroundColor(isSelected ? .white : .primary)
             .padding()
-            .frame(minWidth: 100, minHeight: 100)
+            //.frame(minWidth: 100, minHeight: 100)
             //.border(.primary)
-            .background(isSelected ? Color.accentColor : Color.clear)
+            .background(isSelected ? Color.accentColor : Color.secondary)
             .onTapGesture {
                 isSelected.toggle()
                 if isSelected && selectedCategories.count < 3 {
                     selectedCategories.append(self.title)
                 }
             }
-            .overlay(
+            .cornerRadius(10)
+            /*.overlay(
                 RoundedRectangle(cornerRadius: 20)
                     .stroke(.primary)
-            )
+            )*/
             
     }
 }

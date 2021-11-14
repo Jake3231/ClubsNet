@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		2366674A2740FA1700750FE7 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236667492740FA1700750FE7 /* WebView.swift */; };
 		2366674B2740FA1700750FE7 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236667492740FA1700750FE7 /* WebView.swift */; };
+		2366674D2740FB9000750FE7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2366674C2740FB9000750FE7 /* HomeView.swift */; };
+		2366674E2740FB9000750FE7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2366674C2740FB9000750FE7 /* HomeView.swift */; };
+		236667502740FBCD00750FE7 /* DirectoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2366674F2740FBCD00750FE7 /* DirectoryView.swift */; };
+		236667512740FBCD00750FE7 /* DirectoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2366674F2740FBCD00750FE7 /* DirectoryView.swift */; };
+		236667532740FBE500750FE7 /* AnnouncementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236667522740FBE500750FE7 /* AnnouncementsView.swift */; };
+		236667542740FBE500750FE7 /* AnnouncementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236667522740FBE500750FE7 /* AnnouncementsView.swift */; };
 		2386CCA62740D63900BC11A7 /* CompactClubCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2386CCA52740D63900BC11A7 /* CompactClubCard.swift */; };
 		2386CCA72740D63900BC11A7 /* CompactClubCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2386CCA52740D63900BC11A7 /* CompactClubCard.swift */; };
 		23A48DF5274065CA009936CC /* ClubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A48DF4274065CA009936CC /* ClubView.swift */; };
@@ -35,8 +41,8 @@
 		23BF675B27403BEC00227C12 /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF675A27403BEC00227C12 /* Tests_macOSLaunchTests.swift */; };
 		23BF675C27403BEC00227C12 /* ClubsNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF673427403BEA00227C12 /* ClubsNet.swift */; };
 		23BF675D27403BEC00227C12 /* ClubsNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF673427403BEA00227C12 /* ClubsNet.swift */; };
-		23BF675E27403BEC00227C12 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF673527403BEA00227C12 /* ContentView.swift */; };
-		23BF675F27403BEC00227C12 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF673527403BEA00227C12 /* ContentView.swift */; };
+		23BF675E27403BEC00227C12 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF673527403BEA00227C12 /* MainView.swift */; };
+		23BF675F27403BEC00227C12 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BF673527403BEA00227C12 /* MainView.swift */; };
 		23BF676027403BEC00227C12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23BF673627403BEC00227C12 /* Assets.xcassets */; };
 		23BF676127403BEC00227C12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23BF673627403BEC00227C12 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -60,6 +66,9 @@
 
 /* Begin PBXFileReference section */
 		236667492740FA1700750FE7 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		2366674C2740FB9000750FE7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		2366674F2740FBCD00750FE7 /* DirectoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryView.swift; sourceTree = "<group>"; };
+		236667522740FBE500750FE7 /* AnnouncementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementsView.swift; sourceTree = "<group>"; };
 		2386CCA52740D63900BC11A7 /* CompactClubCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactClubCard.swift; sourceTree = "<group>"; };
 		23A48DF4274065CA009936CC /* ClubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubView.swift; sourceTree = "<group>"; };
 		23A48DF727406979009936CC /* SetupWelcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupWelcome.swift; sourceTree = "<group>"; };
@@ -71,7 +80,7 @@
 		23B74FA92740547C0007BE68 /* OrganizationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationsController.swift; sourceTree = "<group>"; };
 		23B74FAC274054A70007BE68 /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
 		23BF673427403BEA00227C12 /* ClubsNet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubsNet.swift; sourceTree = "<group>"; };
-		23BF673527403BEA00227C12 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		23BF673527403BEA00227C12 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		23BF673627403BEC00227C12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23BF673B27403BEC00227C12 /* ClubsNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClubsNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23BF674127403BEC00227C12 /* MOCK-HackUTDVIII.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MOCK-HackUTDVIII.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +125,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		236667552740FC0800750FE7 /* Reusable Views */ = {
+			isa = PBXGroup;
+			children = (
+				236667492740FA1700750FE7 /* WebView.swift */,
+				23B74FA6274044470007BE68 /* ClubCard.swift */,
+				2386CCA52740D63900BC11A7 /* CompactClubCard.swift */,
+				23A48DF4274065CA009936CC /* ClubView.swift */,
+			);
+			path = "Reusable Views";
+			sourceTree = "<group>";
+		};
+		236667562740FC1300750FE7 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				236667522740FBE500750FE7 /* AnnouncementsView.swift */,
+				2366674F2740FBCD00750FE7 /* DirectoryView.swift */,
+				2366674C2740FB9000750FE7 /* HomeView.swift */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
 		23A48E0627407F4A009936CC /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,13 +182,11 @@
 			isa = PBXGroup;
 			children = (
 				23BF673427403BEA00227C12 /* ClubsNet.swift */,
-				23BF673527403BEA00227C12 /* ContentView.swift */,
+				23BF673527403BEA00227C12 /* MainView.swift */,
+				236667562740FC1300750FE7 /* Tabs */,
 				23A48E07274082D2009936CC /* Setup */,
 				23A48E0627407F4A009936CC /* Data */,
-				23B74FA6274044470007BE68 /* ClubCard.swift */,
-				2386CCA52740D63900BC11A7 /* CompactClubCard.swift */,
-				23A48DF4274065CA009936CC /* ClubView.swift */,
-				236667492740FA1700750FE7 /* WebView.swift */,
+				236667552740FC0800750FE7 /* Reusable Views */,
 				23BF673627403BEC00227C12 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -360,6 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23A48DFE27406F50009936CC /* CategoriesSelector.swift in Sources */,
+				2366674D2740FB9000750FE7 /* HomeView.swift in Sources */,
 				23A48E0127407565009936CC /* Category.swift in Sources */,
 				2366674A2740FA1700750FE7 /* WebView.swift in Sources */,
 				23A48DF5274065CA009936CC /* ClubView.swift in Sources */,
@@ -367,7 +396,9 @@
 				23A48DF827406979009936CC /* SetupWelcome.swift in Sources */,
 				23A48DFB27406B8C009936CC /* UserTypeSelectorView.swift in Sources */,
 				23B74FA7274044470007BE68 /* ClubCard.swift in Sources */,
-				23BF675E27403BEC00227C12 /* ContentView.swift in Sources */,
+				236667502740FBCD00750FE7 /* DirectoryView.swift in Sources */,
+				23BF675E27403BEC00227C12 /* MainView.swift in Sources */,
+				236667532740FBE500750FE7 /* AnnouncementsView.swift in Sources */,
 				23A48E0427407724009936CC /* FavoriteClubsSelector.swift in Sources */,
 				23B74FAA2740547C0007BE68 /* OrganizationsController.swift in Sources */,
 				23B74FAD274054A70007BE68 /* Organization.swift in Sources */,
@@ -380,6 +411,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23A48DFF27406F50009936CC /* CategoriesSelector.swift in Sources */,
+				2366674E2740FB9000750FE7 /* HomeView.swift in Sources */,
 				23A48E0227407565009936CC /* Category.swift in Sources */,
 				2366674B2740FA1700750FE7 /* WebView.swift in Sources */,
 				23A48DF6274065CA009936CC /* ClubView.swift in Sources */,
@@ -387,7 +419,9 @@
 				23A48DF927406979009936CC /* SetupWelcome.swift in Sources */,
 				23A48DFC27406B8C009936CC /* UserTypeSelectorView.swift in Sources */,
 				23B74FA8274044470007BE68 /* ClubCard.swift in Sources */,
-				23BF675F27403BEC00227C12 /* ContentView.swift in Sources */,
+				236667512740FBCD00750FE7 /* DirectoryView.swift in Sources */,
+				23BF675F27403BEC00227C12 /* MainView.swift in Sources */,
+				236667542740FBE500750FE7 /* AnnouncementsView.swift in Sources */,
 				23A48E0527407724009936CC /* FavoriteClubsSelector.swift in Sources */,
 				23B74FAB2740547C0007BE68 /* OrganizationsController.swift in Sources */,
 				23B74FAE274054A70007BE68 /* Organization.swift in Sources */,
