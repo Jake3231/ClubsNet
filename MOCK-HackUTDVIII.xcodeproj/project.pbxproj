@@ -69,6 +69,7 @@
 		2366674C2740FB9000750FE7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2366674F2740FBCD00750FE7 /* DirectoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryView.swift; sourceTree = "<group>"; };
 		236667522740FBE500750FE7 /* AnnouncementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementsView.swift; sourceTree = "<group>"; };
+		236667572741019B00750FE7 /* MOCK-HackUTDVIII--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MOCK-HackUTDVIII--iOS--Info.plist"; sourceTree = "<group>"; };
 		2386CCA52740D63900BC11A7 /* CompactClubCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactClubCard.swift; sourceTree = "<group>"; };
 		23A48DF4274065CA009936CC /* ClubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubView.swift; sourceTree = "<group>"; };
 		23A48DF727406979009936CC /* SetupWelcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupWelcome.swift; sourceTree = "<group>"; };
@@ -170,6 +171,7 @@
 		23BF672E27403BEA00227C12 = {
 			isa = PBXGroup;
 			children = (
+				236667572741019B00750FE7 /* MOCK-HackUTDVIII--iOS--Info.plist */,
 				23BF673327403BEA00227C12 /* Shared */,
 				23BF674227403BEC00227C12 /* macOS */,
 				23BF674B27403BEC00227C12 /* Tests iOS */,
@@ -584,9 +586,9 @@
 				DEVELOPMENT_TEAM = 9W7546BN3K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MOCK-HackUTDVIII--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -614,9 +616,9 @@
 				DEVELOPMENT_TEAM = 9W7546BN3K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MOCK-HackUTDVIII--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;

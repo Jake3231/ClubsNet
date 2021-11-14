@@ -10,7 +10,7 @@ import SwiftUI
 struct FavoriteClubsSelector: View {
     @AppStorage("didRunSetup") var didSetUp: Bool = false
     //@AppStorage("favoriteClubs") var favoriteClubs: Data?
-    @Binding var selectedCategories: [String]
+    var selectedCategories: [String]
     @EnvironmentObject var organizationsController: OrganizationsController
     
    // @State var selectedClubs: [String] = []
@@ -24,14 +24,14 @@ struct FavoriteClubsSelector: View {
                 .navigationBarBackButtonHidden(true)
             //Spacer()
             List() {
-                ForEach($selectedCategories, id: \.self) {$category in
+                ForEach(selectedCategories, id: \.self) {category in
                     Section(category) {
                         ForEach($organizationsController.organizations, id:
                                     \.uri) {$organization in
                             if organization.categories.contains(category) {
                                 CondensedClubView(club: $organization)
                                 .onTapGesture(perform: {
-                                    //organization.isFavorite = true
+                                    organization.isFavorite = true
                                 })
                             }
                         }
@@ -62,7 +62,7 @@ struct FavoriteClubsSelector: View {
 
 struct CondensedClubView: View {
     @Binding var club: Organization
-    @State var isSelected: Bool = false
+    //@State var isSelected: Bool = false
     
     var body: some View {
         HStack {
@@ -71,13 +71,13 @@ struct CondensedClubView: View {
                 .contentShape(Rectangle())
         
             Spacer()
-            Image(systemName: isSelected ? "star.fill" : "star")
+            Image(systemName: (club.isFavorite ?? false) ? "star.fill" : "star")
         }
     }
 }
 
 struct FavoriteClubsSelector_Previews: PreviewProvider {
     static var previews: some View {
-        FavoriteClubsSelector(selectedCategories: .constant([]))
+        FavoriteClubsSelector(selectedCategories: [])
     }
 }

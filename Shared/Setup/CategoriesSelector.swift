@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct CategoriesSelector: View {
-    @State var SelectedCategories: [String] = []
+    @Binding var SelectedCategories: [String]
     @Binding var didSetup: Bool
     @State var isLoading: Bool = false // For now
+    @Binding var setupStage: SetupStage
     
     @EnvironmentObject var comms: OrganizationsController
     
@@ -33,14 +34,18 @@ struct CategoriesSelector: View {
             .padding()
             Spacer()
             
-                NavigationLink(destination: FavoriteClubsSelector(selectedCategories: $SelectedCategories)) {
-                Text("Contiunue")
+               // NavigationLink(destination: FavoriteClubsSelector(selectedCategories: SelectedCategories)) {
+                Button("Contiunue") {
+                    withAnimation() {
+                        setupStage = .favoriteClubsSelector
+                    }
+                }
                     .font(.system(size: 25))
                     .frame(minWidth: 150)
-            }
+            //}
             .buttonStyle(.borderedProminent)
             .cornerRadius(20)
-            .padding(.bottom, 300)
+            .padding(.bottom)
         } else {
             ProgressView()
         }
@@ -62,10 +67,12 @@ struct CategoryBox: View {
             //.border(.primary)
             .background(isSelected ? Color.accentColor : Color.secondary)
             .onTapGesture {
-                isSelected.toggle()
-                if isSelected && selectedCategories.count < 3 {
+                if isSelected {
+                    selectedCategories.removeAll(where: {$0 == self.title})
+                } else if selectedCategories.count < 3 {
                     selectedCategories.append(self.title)
                 }
+                isSelected.toggle()
             }
             .cornerRadius(10)
             /*.overlay(
@@ -78,6 +85,6 @@ struct CategoryBox: View {
 
 struct CategoriesSelector_Previews: PreviewProvider {
     static var previews: some View {
-        CategoriesSelector(SelectedCategories: [], didSetup: .constant(false), isLoading: false)
+        CategoriesSelector(SelectedCategories: .constant([]), didSetup: .constant(false), isLoading: false, setupStage: .constant(.categorySelector))
     }
 }

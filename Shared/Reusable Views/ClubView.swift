@@ -18,7 +18,7 @@ struct ClubView: View {
                 GroupBox {
                     VStack(alignment: .leading) {
                         Label("\(String(club.memberCount ?? 0)) members", systemImage: "person")
-                        Label(club.regularMeetingLocation ?? "No regular location", systemImage: "pin")
+                        Label(club.regularMeetingLocation ?? "No regular location", systemImage: "mappin")
                     }
                 }
                 Spacer()

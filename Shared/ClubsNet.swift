@@ -11,6 +11,8 @@ import SwiftUI
 struct ClubsNet: App {
     @StateObject var networkController = OrganizationsController()
     @AppStorage("didRunSetup") var didSetUp: Bool = false
+    @State var setupStage: SetupStage = .welcome
+    @State var selectedCategories: [String] = []
     
     var body: some Scene {
         WindowGroup {
@@ -18,9 +20,29 @@ struct ClubsNet: App {
                 MainView()
                     .environmentObject(networkController)
             } else {
-                SetupWelcome(didSetUp: $didSetUp)
-                    .environmentObject(networkController)
+                switch setupStage {
+                case .welcome:
+                    SetupWelcome(didSetUp: $didSetUp, setupStage: $setupStage)
+                        .environmentObject(networkController)
+                case .userTypeSelector:
+                    UserTypeSelectorView(didSetup: $didSetUp, setupStage: $setupStage)
+                        .environmentObject(networkController)
+                case .categorySelector:
+                    CategoriesSelector(SelectedCategories: $selectedCategories, didSetup: $didSetUp, setupStage: $setupStage)
+                        .environmentObject(networkController)
+                case .favoriteClubsSelector:
+                    FavoriteClubsSelector(selectedCategories: selectedCategories)
+                        .environmentObject(networkController)
+                    
             }
         }
     }
+}
+}
+
+enum SetupStage {
+    case welcome
+    case userTypeSelector
+    case categorySelector
+    case favoriteClubsSelector
 }

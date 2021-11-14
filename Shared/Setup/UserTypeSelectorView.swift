@@ -10,6 +10,7 @@ import SwiftUI
 struct UserTypeSelectorView: View {
     @Binding var didSetup: Bool
     @EnvironmentObject var comms: OrganizationsController
+    @Binding var setupStage: SetupStage
     
     var body: some View {
         VStack {
@@ -17,11 +18,15 @@ struct UserTypeSelectorView: View {
                 .font(.system(size: 40))
                 .fontWeight(.bold)
                 .padding()
-            NavigationLink(destination: CategoriesSelector(didSetup: $didSetup)) {
-                Text("Student")
+            //NavigationLink(destination: CategoriesSelector(didSetup: $didSetup)) {
+            Button("Student") {
+                withAnimation() {
+                    setupStage = .categorySelector
+                }
+            }
                     .font(.system(size: 25))
                     .frame(minWidth: 150)
-            }
+           // }
             .buttonStyle(.borderedProminent)
             .cornerRadius(20)
             Button(action: {didSetup = true}) {
@@ -39,6 +44,6 @@ struct UserTypeSelectorView: View {
 
 struct UserTypeSelectorView_Previews: PreviewProvider {
     static var previews: some View {
-        UserTypeSelectorView(didSetup: .constant(false))
+        UserTypeSelectorView(didSetup: .constant(false), setupStage: .constant(.userTypeSelector))
     }
 }
