@@ -32,6 +32,7 @@ struct ClubCard: View {
                 .frame(maxHeight: 40)
                 Text(club?.name ??  "Unknown")
                     .fontWeight(.bold)
+                    .foregroundColor(Color("UTDGreen"))
                 Spacer()
             }
             HStack {

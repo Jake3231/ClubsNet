@@ -20,9 +20,14 @@ struct Organization: Codable, Identifiable, Equatable {
     var photoUriWithVersion: String
     var memberCount: Int?
     var categories: [String]
-    var orgMember: Bool
-    var newOrg: Bool
-    var hasUpcomingEvents: Bool
+    var orgMember: Bool?
+    var newOrg: Bool?
+    var hasUpcomingEvents: Bool?
     var isFavorite: Bool? = false
+    var contactName: String?
+    var hasEmailAddress: Bool? = false
+    var twitter: String?
+    var facebook: String?
+    var description: String?
     
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2362A289274152910062F748 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A288274152910062F748 /* Cache.swift */; };
+		2362A28A274152910062F748 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2362A288274152910062F748 /* Cache.swift */; };
 		2366674A2740FA1700750FE7 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236667492740FA1700750FE7 /* WebView.swift */; };
 		2366674B2740FA1700750FE7 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236667492740FA1700750FE7 /* WebView.swift */; };
 		2366674D2740FB9000750FE7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2366674C2740FB9000750FE7 /* HomeView.swift */; };
@@ -65,6 +67,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2362A288274152910062F748 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		236667492740FA1700750FE7 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		2366674C2740FB9000750FE7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2366674F2740FBCD00750FE7 /* DirectoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryView.swift; sourceTree = "<group>"; };
@@ -137,14 +140,14 @@
 			path = "Reusable Views";
 			sourceTree = "<group>";
 		};
-		236667562740FC1300750FE7 /* Tabs */ = {
+		236667562740FC1300750FE7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				236667522740FBE500750FE7 /* AnnouncementsView.swift */,
 				2366674F2740FBCD00750FE7 /* DirectoryView.swift */,
 				2366674C2740FB9000750FE7 /* HomeView.swift */,
 			);
-			path = Tabs;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		23A48E0627407F4A009936CC /* Data */ = {
@@ -184,8 +187,9 @@
 			isa = PBXGroup;
 			children = (
 				23BF673427403BEA00227C12 /* ClubsNet.swift */,
+				2362A288274152910062F748 /* Cache.swift */,
 				23BF673527403BEA00227C12 /* MainView.swift */,
-				236667562740FC1300750FE7 /* Tabs */,
+				236667562740FC1300750FE7 /* Views */,
 				23A48E07274082D2009936CC /* Setup */,
 				23A48E0627407F4A009936CC /* Data */,
 				236667552740FC0800750FE7 /* Reusable Views */,
@@ -393,6 +397,7 @@
 				2366674D2740FB9000750FE7 /* HomeView.swift in Sources */,
 				23A48E0127407565009936CC /* Category.swift in Sources */,
 				2366674A2740FA1700750FE7 /* WebView.swift in Sources */,
+				2362A289274152910062F748 /* Cache.swift in Sources */,
 				23A48DF5274065CA009936CC /* ClubView.swift in Sources */,
 				2386CCA62740D63900BC11A7 /* CompactClubCard.swift in Sources */,
 				23A48DF827406979009936CC /* SetupWelcome.swift in Sources */,
@@ -416,6 +421,7 @@
 				2366674E2740FB9000750FE7 /* HomeView.swift in Sources */,
 				23A48E0227407565009936CC /* Category.swift in Sources */,
 				2366674B2740FA1700750FE7 /* WebView.swift in Sources */,
+				2362A28A274152910062F748 /* Cache.swift in Sources */,
 				23A48DF6274065CA009936CC /* ClubView.swift in Sources */,
 				2386CCA72740D63900BC11A7 /* CompactClubCard.swift in Sources */,
 				23A48DF927406979009936CC /* SetupWelcome.swift in Sources */,

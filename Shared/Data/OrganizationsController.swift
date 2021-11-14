@@ -62,6 +62,31 @@ class OrganizationsController: ObservableObject {
         }
     }
     
+    func getAdvancedDataFor(organization: String) {
+        DispatchQueue.global(qos: .background).async {
+            let urlString = "https://api.presence.io/utdallas/v1/organizations/\(organization)"
+
+                if let url = URL(string: urlString) {
+                    if let data = try? Data(contentsOf: url) {
+                        let decoder = JSONDecoder()
+                        decoder.keyDecodingStrategy = .useDefaultKeys
+                        decoder.dateDecodingStrategy = .secondsSince1970
+                        let club = try! decoder.decode(Organization.self, from: data)
+                        let index = self.organizations.firstIndex(where: {$0.uri == organization})
+                        
+                        DispatchQueue.main.async {
+                            self.organizations[index ?? 0].twitter = club.twitter
+                            self.organizations[index ?? 0].facebook = club.facebook
+                            self.organizations[index ?? 0].description = club.description
+                        }
+                        
+                        
+                        print("fetched club info")
+                    }
+                }
+            }
+    }
+    
     func fetchClubs(_ completion: (() -> Void)?) {
         getOrganizations() { clubs in
             DispatchQueue.main.async {self.organizations = clubs

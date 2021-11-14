@@ -21,11 +21,36 @@ struct ClubView: View {
                         Label(club.regularMeetingLocation ?? "No regular location", systemImage: "mappin")
                     }
                 }
-                Spacer()
+               // Spacer()
             }
             Spacer()
         }
+            HStack(alignment: .top) {
+                VStack(alignment: .leading) {
+                    GroupBox("Contact") {
+                        VStack(alignment: .leading) {
+                            HStack {
+                                Image("facebook").resizable()
+                                    .frame(maxWidth: 20, maxHeight: 20)
+                                Text(club.facebook ?? "None")
+                                Spacer()
+                            }
+                            
+                            HStack {
+                                Image("twitter").resizable()
+                                    .frame(maxWidth: 20, maxHeight: 20)
+                                Text(club.twitter ?? "Twitter")
+                                Spacer()
+                            }
+                        }
+                    }
+                }
+                Spacer()
+            }
+            WebView(text: club.description ?? "")
+            Spacer()
         }
+        .onAppear(perform: {clubsController.getAdvancedDataFor(organization: club.uri)})
         .padding()
         .navigationTitle(club.name)
         .toolbar() {

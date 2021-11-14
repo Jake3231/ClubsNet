@@ -18,12 +18,14 @@ struct DirectoryView: View {
                         ClubCard(club: club.wrappedValue)
                             .padding([.top, .bottom], 5)
                     }
+                    .listRowBackground(Color(UIColor.secondarySystemBackground))
 #if os(iOS)
                     .listRowSeparator(.hidden)
 #endif
                     
                 }
             }
+            .background(Color(UIColor.secondarySystemBackground))
             .listStyle(.plain)
             .onAppear(perform: {
                 if networkController.organizations.isEmpty {

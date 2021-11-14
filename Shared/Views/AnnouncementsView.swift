@@ -10,7 +10,14 @@ import SwiftUI
 struct AnnouncementsView: View {
     var body: some View {
         NavigationView {
-            Text("Announcements")
+            VStack {
+                Image(systemName: "hammer.fill")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(maxWidth: 100, maxHeight: 100)
+                    .imageScale(.large)
+                Text("Under construction, check back later!")
+            }
                 .navigationTitle("Annoncements")
         }
     }
