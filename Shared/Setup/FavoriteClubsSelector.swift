@@ -9,44 +9,44 @@ import SwiftUI
 
 struct FavoriteClubsSelector: View {
     @AppStorage("didRunSetup") var didSetUp: Bool = false
-    @AppStorage("favoriteClubs") var favoriteClubs: Data?
+    //@AppStorage("favoriteClubs") var favoriteClubs: Data?
     @Binding var selectedCategories: [String]
     @EnvironmentObject var organizationsController: OrganizationsController
     
-    @State var selectedClubs: [String] = []
+   // @State var selectedClubs: [String] = []
     
     var body: some View {
         VStack(alignment: .center) {
             Text("Select your favorite clubs")
                 .font(.system(size: 50))
                 .fontWeight(.bold)
-                .padding()
+                .padding([.bottom, .leading, .trailing])
                 .navigationBarBackButtonHidden(true)
-            Spacer()
+            //Spacer()
             List() {
-                ForEach($selectedCategories, id: \.self) {category in
-                    Section(category.wrappedValue) {
-                        ForEach(organizationsController.getOrganizationsFor(category: category.wrappedValue), id:
-                                    \.name) {organization in
-                            CondensedClubView(club: organization)
+                ForEach($selectedCategories, id: \.self) {$category in
+                    Section(category) {
+                        ForEach($organizationsController.organizations, id:
+                                    \.uri) {$organization in
+                            if organization.categories.contains(category) {
+                                CondensedClubView(club: $organization)
                                 .onTapGesture(perform: {
-                                    if selectedClubs.contains(organization.uri) {
-                                        selectedClubs.removeAll(where: {$0 == organization.uri})
-                                    } else {
-                                        selectedClubs.append(organization.uri)
-                                    }
+                                    //organization.isFavorite = true
                                 })
+                            }
+                        }
                         }
                     }
                 }
-            }
+            //.frame(minHeight: 500)
+           }
             .contentShape(Rectangle())
-            .frame(minHeight: 400)
+       // Spacer()
             Button(action: {
-                for club in selectedClubs {
+                /*for club in selectedClubs {
                     print("FAVORITING CLUB")
-                    organizationsController.favorite(organization: club)
-                }
+                    //organizationsController.favorite(organization: club)
+                }*/
                 didSetUp = true
                 
             }) {
@@ -56,13 +56,12 @@ struct FavoriteClubsSelector: View {
             }
             .buttonStyle(.borderedProminent)
             .cornerRadius(20)
-            .padding(.bottom, 300)
+            .padding(.bottom)
         }
     }
-}
 
 struct CondensedClubView: View {
-    var club: Organization
+    @Binding var club: Organization
     @State var isSelected: Bool = false
     
     var body: some View {
@@ -70,19 +69,9 @@ struct CondensedClubView: View {
             Text(club.name)
                 .frame(maxWidth: .infinity)
                 .contentShape(Rectangle())
-                /*.onTapGesture {
-                    isSelected.toggle()
-                }*/
         
             Spacer()
-            
-        if isSelected {
-            Image(systemName: "star.fill")
-               
-        } else {
-            Image(systemName: "star")
-        }
-             
+            Image(systemName: isSelected ? "star.fill" : "star")
         }
     }
 }

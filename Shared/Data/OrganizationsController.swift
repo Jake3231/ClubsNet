@@ -30,9 +30,9 @@ class OrganizationsController: ObservableObject {
 ]
     @Published var recentlyViewed: [Organization] = [] // Stack
     @Published var organizationsPerCategory: [String:[Organization]] = [:]
-    @Published var favoriteClubs: [String] = []
+    var favoriteClubs: [Organization] {organizations.filter({$0.isFavorite ?? false})}
     
-    private var didSortIntoCategories: Bool = false
+    @Published var didFinishSortingClubs: Bool = true
     
     func getOrganizations(completion: @escaping ([Organization]) -> Void) {
         DispatchQueue.global(qos: .background).async {
@@ -52,10 +52,12 @@ class OrganizationsController: ObservableObject {
     }
     
     func notifyOfViewed(club: Organization?) {
+        if !recentlyViewed.contains(club!) {
         if club != nil {
         if recentlyViewed.last != club! {
             if recentlyViewed.count == 3 {recentlyViewed.removeFirst()}
             recentlyViewed.append(club!)
+        }
         }
         }
     }
@@ -66,8 +68,8 @@ class OrganizationsController: ObservableObject {
                 
             
             // On a background thread, begin sorting organizations into categories
-            if !self.didSortIntoCategories {
-            DispatchQueue.global(qos: .background).async {
+            if !self.didFinishSortingClubs {
+            /*DispatchQueue.global(qos: .background).async {
                 for club in self.organizations {
                     for category in club.categories {
                         if !category.isEmpty {
@@ -82,8 +84,8 @@ class OrganizationsController: ObservableObject {
                     }
                 }
                 print("Finished sorting clubs into categories")
-                self.didSortIntoCategories = true
-            }
+                DispatchQueue.main.async {self.didFinishSortingClubs = true}
+            }*/
             }
             }
             if completion != nil {
@@ -108,8 +110,10 @@ class OrganizationsController: ObservableObject {
         return organizations.first(where: {$0.uri == uri})
     }
     
-    func favorite(organization: String) {
+   /* func favorite(organization: String) {
         print("FAVORITING \(organization)")
-        favoriteClubs.append(organization)
-    }
+        if !favoriteClubs.contains(organization) {
+            favoriteClubs.append(organization)
+        }
+    }*/
 }

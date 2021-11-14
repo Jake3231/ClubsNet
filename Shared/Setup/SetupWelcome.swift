@@ -13,18 +13,22 @@ struct SetupWelcome: View {
     
     var body: some View {
         NavigationView {
-        VStack {
-        Text("Clubs Net")
-            .fontWeight(.bold)
-            .font(.system(size: 34))
-            NavigationLink(destination: UserTypeSelectorView(didSetup: $didSetUp)) {
-       Text("Start")
-                    .frame(minWidth: 100)
-            }
-            .buttonStyle(.borderedProminent)
-            .cornerRadius(20)
+                VStack {
+                    Text("Clubs Net")
+                        .fontWeight(.bold)
+                        .font(.system(size: 34))
+                    if comms.didFinishSortingClubs {
+                    NavigationLink(destination: UserTypeSelectorView(didSetup: $didSetUp)) {
+                        Text("Start")
+                            .frame(minWidth: 100)
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .cornerRadius(20)
+                    } else {
+                        ProgressView().controlSize(.large)
+                    }
+                }
         }
-    }
         .onAppear() {
             comms.fetchClubs(nil)
         }

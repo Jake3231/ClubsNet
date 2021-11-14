@@ -45,7 +45,7 @@ struct DirectoryView: View {
             List {
                 //  Section("Recently Viewed") {
                 ForEach($networkController.organizations) {club in
-                    NavigationLink(destination: ClubView(club: club.wrappedValue)) {
+                    NavigationLink(destination: ClubView(club: club)) {
                         ClubCard(club: club.wrappedValue)
                             .padding([.top, .bottom], 5)
                     }
@@ -76,17 +76,19 @@ struct HomeView: View {
             List {
                 Section("Recently Viewed") {
                     if !$networkController.recentlyViewed.isEmpty {
-                    ForEach($networkController.recentlyViewed.reversed()) {club in
-                        NavigationLink(destination: ClubView(club: club.wrappedValue)) {
-                               /* ClubCard(club: club.wrappedValue)
-                                    .padding([.top, .bottom], 5)*/
-                                Text(club.wrappedValue.name)
-#if os(iOS)
-                            .listRowSeparator(.hidden)
-#endif
-                            
-                        }
-                    }
+                        HStack {
+                            ForEach($networkController.organizations) {club in
+                                if networkController.recentlyViewed.contains(club.wrappedValue) {
+                                NavigationLink(destination: ClubView(club: club)) {
+                                    CompactClubCard(club: club)
+                                        #if os(iOS)
+                                        .listRowSeparator(.hidden)
+                                            #endif
+                                    
+                                }
+                                }
+                            }
+                            }
                     } else {
                         Text("None, yet!")
                             .listRowSeparator(.hidden)
@@ -94,13 +96,16 @@ struct HomeView: View {
                     }
                 }
                 Section("Favorites") {
-                    ForEach($networkController.favoriteClubs, id: \.self) {club in
-                        NavigationLink(destination: ClubView(club: networkController.organizationFrom(uri: club.wrappedValue))) {
-                                ClubCard(club: networkController.organizationFrom(uri: club.wrappedValue))
-#if os(iOS)
-                            .listRowSeparator(.hidden)
-#endif
+                    ForEach($networkController.organizations) {club in
+                        if club.wrappedValue.isFavorite ?? false {
+                        NavigationLink(destination: ClubView(club: club)) {
+                          
+                                ClubCard(club: club.wrappedValue)
                             
+#if os(iOS)
+                                .listRowSeparator(.hidden)
+#endif
+                            }
                         }
                     }
                 }
@@ -119,7 +124,10 @@ struct HomeView: View {
 
 struct AnnouncementsView: View {
     var body: some View {
-        Text("Announcemnsts")
+        NavigationView {
+            Text("Announcemnsts")
+                .navigationTitle("Annoncements")
+        }
     }
 }
 

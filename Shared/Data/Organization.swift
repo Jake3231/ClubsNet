@@ -23,5 +23,6 @@ struct Organization: Codable, Identifiable, Equatable {
     var orgMember: Bool
     var newOrg: Bool
     var hasUpcomingEvents: Bool
+    var isFavorite: Bool? = false
     
 }
