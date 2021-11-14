@@ -34,10 +34,10 @@ struct ClubsNet: App {
                     FavoriteClubsSelector(selectedCategories: selectedCategories)
                         .environmentObject(networkController)
                     
+                }
             }
         }
     }
-}
 }
 
 enum SetupStage {

@@ -18,10 +18,10 @@ struct DirectoryView: View {
                         ClubCard(club: club.wrappedValue)
                             .padding([.top, .bottom], 5)
                     }
+                    #if os(iOS)
                     .listRowBackground(Color(UIColor.secondarySystemBackground))
-#if os(iOS)
                     .listRowSeparator(.hidden)
-#endif
+                    #endif
                     
                 }
             }

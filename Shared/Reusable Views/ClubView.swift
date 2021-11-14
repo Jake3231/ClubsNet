@@ -21,7 +21,6 @@ struct ClubView: View {
                         Label(club.regularMeetingLocation ?? "No regular location", systemImage: "mappin")
                     }
                 }
-               // Spacer()
             }
             Spacer()
         }

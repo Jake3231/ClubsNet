@@ -18,7 +18,6 @@ struct UserTypeSelectorView: View {
                 .font(.system(size: 40))
                 .fontWeight(.bold)
                 .padding()
-            //NavigationLink(destination: CategoriesSelector(didSetup: $didSetup)) {
             Button("Student") {
                 withAnimation() {
                     setupStage = .categorySelector
@@ -26,7 +25,6 @@ struct UserTypeSelectorView: View {
             }
                     .font(.system(size: 25))
                     .frame(minWidth: 150)
-           // }
             .buttonStyle(.borderedProminent)
             .cornerRadius(20)
             Button(action: {didSetup = true}) {

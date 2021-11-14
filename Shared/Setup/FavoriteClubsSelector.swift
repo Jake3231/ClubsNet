@@ -9,11 +9,8 @@ import SwiftUI
 
 struct FavoriteClubsSelector: View {
     @AppStorage("didRunSetup") var didSetUp: Bool = false
-    //@AppStorage("favoriteClubs") var favoriteClubs: Data?
     var selectedCategories: [String]
     @EnvironmentObject var organizationsController: OrganizationsController
-    
-   // @State var selectedClubs: [String] = []
     
     var body: some View {
         VStack(alignment: .center) {
@@ -22,7 +19,6 @@ struct FavoriteClubsSelector: View {
                 .fontWeight(.bold)
                 .padding([.bottom, .leading, .trailing])
                 .navigationBarBackButtonHidden(true)
-            //Spacer()
             List() {
                 ForEach(selectedCategories, id: \.self) {category in
                     Section(category) {
@@ -38,15 +34,9 @@ struct FavoriteClubsSelector: View {
                         }
                     }
                 }
-            //.frame(minHeight: 500)
            }
             .contentShape(Rectangle())
-       // Spacer()
             Button(action: {
-                /*for club in selectedClubs {
-                    print("FAVORITING CLUB")
-                    //organizationsController.favorite(organization: club)
-                }*/
                 didSetUp = true
                 
             }) {
@@ -62,7 +52,6 @@ struct FavoriteClubsSelector: View {
 
 struct CondensedClubView: View {
     @Binding var club: Organization
-    //@State var isSelected: Bool = false
     
     var body: some View {
         HStack {

@@ -19,14 +19,12 @@ struct SetupWelcome: View {
                         .fontWeight(.bold)
                         .font(.system(size: 34))
                     if comms.didFinishSortingClubs {
-                   // NavigationLink(destination: UserTypeSelectorView(didSetup: $didSetUp)) {
                         Button("Start") {
                             withAnimation() {
                                 setupStage = .userTypeSelector
                             }
                         }
                             .frame(minWidth: 100)
-                  //  }
                     .buttonStyle(.borderedProminent)
                     .cornerRadius(20)
                     } else {

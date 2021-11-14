@@ -13,12 +13,9 @@ struct CompactClubCard: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 10)
-            //.frame(width: 250, height: 100)
                 .foregroundColor(Color("CardBackground") )
                 .shadow(color: .secondary, radius: 3)
             HStack() {
-                //  HStack(alignment: .center) {
-                //  AsyncImage(url: URL(string: ))
                 AsyncImage(url: URL(string: "https://utdallas-cdn.presence.io/organization-photos/e84b1f83-51b3-4fcd-8fd6-e0d4e2be5e31/\(club.photoUri ?? "")")) { image in
                     image
                         .resizable()
@@ -35,7 +32,6 @@ struct CompactClubCard: View {
                     .foregroundColor(Color("UTDGreen"))
                     .minimumScaleFactor(0.5)
                 Spacer()
-                // }
             }
             .padding(5)
         }

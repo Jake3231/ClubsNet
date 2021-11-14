@@ -26,8 +26,6 @@ struct MainView: View {
                     Label("Announcements", systemImage: "bell")
                 }
         }
-        //Green - 14524F
-        //Oragne - BD4F00
     }
 }
 

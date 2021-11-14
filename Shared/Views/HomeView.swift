@@ -10,15 +10,13 @@ import SwiftUI
 struct HomeView: View {
     @EnvironmentObject var networkController: OrganizationsController
     
-#if os(iOS)
-init() {
-        //Use this if NavigationBarTitle is with Large Font
-    UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(named:"UTDGreen")]
-
-        //Use this if NavigationBarTitle is with displayMode = .inline
+    // Set navigation bar title color
+    #if os(iOS)
+    init() {
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(named:"UTDGreen")]
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(named:"UTDGreen")]
-    }
-#endif
+        }
+    #endif
     
     var body: some View {
         NavigationView() {
@@ -73,7 +71,6 @@ struct RecentlyViewedView: View {
     @EnvironmentObject var networkController: OrganizationsController
     
     var body: some View {
-       // LazyHGrid(rows: [GridItem(.flexible(minimum: 10, maximum: 100), spacing: 10, alignment: .center)]) {
             ForEach($networkController.organizations) {club in
                 if networkController.recentlyViewed.contains(club.wrappedValue) {
                     ZStack {
@@ -88,7 +85,6 @@ struct RecentlyViewedView: View {
                     .listRowBackground(Color(UIColor.secondarySystemBackground))
                 }
             }
-           // }
     }
 }
 

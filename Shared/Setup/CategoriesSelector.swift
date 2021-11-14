@@ -34,7 +34,6 @@ struct CategoriesSelector: View {
             .padding()
             Spacer()
             
-               // NavigationLink(destination: FavoriteClubsSelector(selectedCategories: SelectedCategories)) {
                 Button("Contiunue") {
                     withAnimation() {
                         setupStage = .favoriteClubsSelector
@@ -42,7 +41,6 @@ struct CategoriesSelector: View {
                 }
                     .font(.system(size: 25))
                     .frame(minWidth: 150)
-            //}
             .buttonStyle(.borderedProminent)
             .cornerRadius(20)
             .padding(.bottom)
@@ -75,10 +73,6 @@ struct CategoryBox: View {
                 isSelected.toggle()
             }
             .cornerRadius(10)
-            /*.overlay(
-                RoundedRectangle(cornerRadius: 20)
-                    .stroke(.primary)
-            )*/
             
     }
 }
