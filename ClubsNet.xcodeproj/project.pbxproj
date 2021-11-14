@@ -72,7 +72,7 @@
 		2366674C2740FB9000750FE7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2366674F2740FBCD00750FE7 /* DirectoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryView.swift; sourceTree = "<group>"; };
 		236667522740FBE500750FE7 /* AnnouncementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementsView.swift; sourceTree = "<group>"; };
-		236667572741019B00750FE7 /* MOCK-HackUTDVIII--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MOCK-HackUTDVIII--iOS--Info.plist"; sourceTree = "<group>"; };
+		236667572741019B00750FE7 /* ClubsNet--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ClubsNet--iOS--Info.plist"; sourceTree = "<group>"; };
 		2386CCA52740D63900BC11A7 /* CompactClubCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactClubCard.swift; sourceTree = "<group>"; };
 		23A48DF4274065CA009936CC /* ClubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubView.swift; sourceTree = "<group>"; };
 		23A48DF727406979009936CC /* SetupWelcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupWelcome.swift; sourceTree = "<group>"; };
@@ -87,7 +87,7 @@
 		23BF673527403BEA00227C12 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		23BF673627403BEC00227C12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23BF673B27403BEC00227C12 /* ClubsNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClubsNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		23BF674127403BEC00227C12 /* MOCK-HackUTDVIII.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MOCK-HackUTDVIII.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		23BF674127403BEC00227C12 /* ClubsNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClubsNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23BF674327403BEC00227C12 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		23BF674827403BEC00227C12 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23BF674C27403BEC00227C12 /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
@@ -174,7 +174,7 @@
 		23BF672E27403BEA00227C12 = {
 			isa = PBXGroup;
 			children = (
-				236667572741019B00750FE7 /* MOCK-HackUTDVIII--iOS--Info.plist */,
+				236667572741019B00750FE7 /* ClubsNet--iOS--Info.plist */,
 				23BF673327403BEA00227C12 /* Shared */,
 				23BF674227403BEC00227C12 /* macOS */,
 				23BF674B27403BEC00227C12 /* Tests iOS */,
@@ -202,7 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				23BF673B27403BEC00227C12 /* ClubsNet.app */,
-				23BF674127403BEC00227C12 /* MOCK-HackUTDVIII.app */,
+				23BF674127403BEC00227C12 /* ClubsNet.app */,
 				23BF674827403BEC00227C12 /* Tests iOS.xctest */,
 				23BF675427403BEC00227C12 /* Tests macOS.xctest */,
 			);
@@ -238,9 +238,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		23BF673A27403BEC00227C12 /* MOCK-HackUTDVIII (iOS) */ = {
+		23BF673A27403BEC00227C12 /* ClubsNet (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 23BF676427403BEC00227C12 /* Build configuration list for PBXNativeTarget "MOCK-HackUTDVIII (iOS)" */;
+			buildConfigurationList = 23BF676427403BEC00227C12 /* Build configuration list for PBXNativeTarget "ClubsNet (iOS)" */;
 			buildPhases = (
 				23BF673727403BEC00227C12 /* Sources */,
 				23BF673827403BEC00227C12 /* Frameworks */,
@@ -250,14 +250,14 @@
 			);
 			dependencies = (
 			);
-			name = "MOCK-HackUTDVIII (iOS)";
+			name = "ClubsNet (iOS)";
 			productName = "MOCK-HackUTDVIII (iOS)";
 			productReference = 23BF673B27403BEC00227C12 /* ClubsNet.app */;
 			productType = "com.apple.product-type.application";
 		};
-		23BF674027403BEC00227C12 /* MOCK-HackUTDVIII (macOS) */ = {
+		23BF674027403BEC00227C12 /* ClubsNet (macOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 23BF676727403BEC00227C12 /* Build configuration list for PBXNativeTarget "MOCK-HackUTDVIII (macOS)" */;
+			buildConfigurationList = 23BF676727403BEC00227C12 /* Build configuration list for PBXNativeTarget "ClubsNet (macOS)" */;
 			buildPhases = (
 				23BF673D27403BEC00227C12 /* Sources */,
 				23BF673E27403BEC00227C12 /* Frameworks */,
@@ -267,9 +267,9 @@
 			);
 			dependencies = (
 			);
-			name = "MOCK-HackUTDVIII (macOS)";
+			name = "ClubsNet (macOS)";
 			productName = "MOCK-HackUTDVIII (macOS)";
-			productReference = 23BF674127403BEC00227C12 /* MOCK-HackUTDVIII.app */;
+			productReference = 23BF674127403BEC00227C12 /* ClubsNet.app */;
 			productType = "com.apple.product-type.application";
 		};
 		23BF674727403BEC00227C12 /* Tests iOS */ = {
@@ -334,7 +334,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 23BF673227403BEA00227C12 /* Build configuration list for PBXProject "MOCK-HackUTDVIII" */;
+			buildConfigurationList = 23BF673227403BEA00227C12 /* Build configuration list for PBXProject "ClubsNet" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -347,8 +347,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				23BF673A27403BEC00227C12 /* MOCK-HackUTDVIII (iOS) */,
-				23BF674027403BEC00227C12 /* MOCK-HackUTDVIII (macOS) */,
+				23BF673A27403BEC00227C12 /* ClubsNet (iOS) */,
+				23BF674027403BEC00227C12 /* ClubsNet (macOS) */,
 				23BF674727403BEC00227C12 /* Tests iOS */,
 				23BF675327403BEC00227C12 /* Tests macOS */,
 			);
@@ -460,12 +460,12 @@
 /* Begin PBXTargetDependency section */
 		23BF674A27403BEC00227C12 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 23BF673A27403BEC00227C12 /* MOCK-HackUTDVIII (iOS) */;
+			target = 23BF673A27403BEC00227C12 /* ClubsNet (iOS) */;
 			targetProxy = 23BF674927403BEC00227C12 /* PBXContainerItemProxy */;
 		};
 		23BF675627403BEC00227C12 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 23BF674027403BEC00227C12 /* MOCK-HackUTDVIII (macOS) */;
+			target = 23BF674027403BEC00227C12 /* ClubsNet (macOS) */;
 			targetProxy = 23BF675527403BEC00227C12 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -592,7 +592,7 @@
 				DEVELOPMENT_TEAM = 9W7546BN3K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "MOCK-HackUTDVIII--iOS--Info.plist";
+				INFOPLIST_FILE = "ClubsNet--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -622,7 +622,7 @@
 				DEVELOPMENT_TEAM = 9W7546BN3K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "MOCK-HackUTDVIII--iOS--Info.plist";
+				INFOPLIST_FILE = "ClubsNet--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -664,7 +664,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "jakespann.MOCK-HackUTDVIII";
-				PRODUCT_NAME = "MOCK-HackUTDVIII";
+				PRODUCT_NAME = ClubsNet;
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -692,7 +692,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "jakespann.MOCK-HackUTDVIII";
-				PRODUCT_NAME = "MOCK-HackUTDVIII";
+				PRODUCT_NAME = ClubsNet;
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -803,7 +803,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		23BF673227403BEA00227C12 /* Build configuration list for PBXProject "MOCK-HackUTDVIII" */ = {
+		23BF673227403BEA00227C12 /* Build configuration list for PBXProject "ClubsNet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				23BF676227403BEC00227C12 /* Debug */,
@@ -812,7 +812,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		23BF676427403BEC00227C12 /* Build configuration list for PBXNativeTarget "MOCK-HackUTDVIII (iOS)" */ = {
+		23BF676427403BEC00227C12 /* Build configuration list for PBXNativeTarget "ClubsNet (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				23BF676527403BEC00227C12 /* Debug */,
@@ -821,7 +821,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		23BF676727403BEC00227C12 /* Build configuration list for PBXNativeTarget "MOCK-HackUTDVIII (macOS)" */ = {
+		23BF676727403BEC00227C12 /* Build configuration list for PBXNativeTarget "ClubsNet (macOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				23BF676827403BEC00227C12 /* Debug */,
