@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ClubCard: View {
-    var club: Organization
+    var club: Organization?
     
     var body: some View {
         ZStack {
@@ -19,7 +19,7 @@ struct ClubCard: View {
         VStack(alignment: .leading) {
             HStack(alignment: .center) {
               //  AsyncImage(url: URL(string: ))
-                AsyncImage(url: URL(string: "https://utdallas-cdn.presence.io/organization-photos/e84b1f83-51b3-4fcd-8fd6-e0d4e2be5e31/\(club.photoUri ?? "")")) { image in
+                AsyncImage(url: URL(string: "https://utdallas-cdn.presence.io/organization-photos/e84b1f83-51b3-4fcd-8fd6-e0d4e2be5e31/\(club?.photoUri ?? "")")) { image in
                     image
                         .resizable()
                         .aspectRatio(contentMode: .fit)
@@ -30,12 +30,12 @@ struct ClubCard: View {
                 }
                 .clipShape(RoundedRectangle(cornerRadius: 5))
                 .frame(maxHeight: 40)
-                Text(club.name)
+                Text(club?.name ??  "Unknown")
                     .fontWeight(.bold)
                 Spacer()
             }
             HStack {
-                Text("\(String(club.memberCount ?? 0)) members")
+                Text("\(String(club?.memberCount ?? 0)) members")
                     .foregroundColor(.secondary)
                     .font(.system(.caption))
                 Spacer()

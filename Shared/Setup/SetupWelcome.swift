@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct SetupWelcome: View {
+    @EnvironmentObject var comms: OrganizationsController
     @Binding var didSetUp: Bool
+    
     var body: some View {
         NavigationView {
         VStack {
@@ -23,6 +25,9 @@ struct SetupWelcome: View {
             .cornerRadius(20)
         }
     }
+        .onAppear() {
+            comms.fetchClubs(nil)
+        }
     }
 }
 

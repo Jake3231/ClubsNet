@@ -9,6 +9,7 @@ import SwiftUI
 
 struct UserTypeSelectorView: View {
     @Binding var didSetup: Bool
+    @EnvironmentObject var comms: OrganizationsController
     
     var body: some View {
         VStack {

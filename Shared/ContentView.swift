@@ -45,7 +45,7 @@ struct DirectoryView: View {
             List {
                 //  Section("Recently Viewed") {
                 ForEach($networkController.organizations) {club in
-                    NavigationLink(destination: ClubView(club: club)) {
+                    NavigationLink(destination: ClubView(club: club.wrappedValue)) {
                         ClubCard(club: club.wrappedValue)
                             .padding([.top, .bottom], 5)
                     }
@@ -59,7 +59,7 @@ struct DirectoryView: View {
             .listStyle(.plain)
             .onAppear(perform: {
                 if networkController.organizations.isEmpty {
-                    networkController.decodeJSON()
+                    networkController.fetchClubs(nil)
                 }
                 
             })
@@ -75,8 +75,9 @@ struct HomeView: View {
         NavigationView() {
             List {
                 Section("Recently Viewed") {
+                    if !$networkController.recentlyViewed.isEmpty {
                     ForEach($networkController.recentlyViewed.reversed()) {club in
-                            NavigationLink(destination: ClubView(club: club)) {
+                        NavigationLink(destination: ClubView(club: club.wrappedValue)) {
                                /* ClubCard(club: club.wrappedValue)
                                     .padding([.top, .bottom], 5)*/
                                 Text(club.wrappedValue.name)
@@ -86,14 +87,28 @@ struct HomeView: View {
                             
                         }
                     }
+                    } else {
+                        Text("None, yet!")
+                            .listRowSeparator(.hidden)
+                            .frame(alignment: .center)
+                    }
                 }
                 Section("Favorites") {
+                    ForEach($networkController.favoriteClubs, id: \.self) {club in
+                        NavigationLink(destination: ClubView(club: networkController.organizationFrom(uri: club.wrappedValue))) {
+                                ClubCard(club: networkController.organizationFrom(uri: club.wrappedValue))
+#if os(iOS)
+                            .listRowSeparator(.hidden)
+#endif
+                            
+                        }
+                    }
                 }
             }
             .listStyle(.plain)
             .onAppear(perform: {
                 if networkController.organizations.isEmpty {
-                    networkController.decodeJSON()
+                    networkController.fetchClubs(nil)
                 }
                 
             })

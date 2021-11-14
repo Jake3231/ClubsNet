@@ -10,7 +10,7 @@ import SwiftUI
 struct CategoriesSelector: View {
     @State var SelectedCategories: [String] = []
     @Binding var didSetup: Bool
-    @State var isLoading: Bool = true
+    @State var isLoading: Bool = false // For now
     
     @EnvironmentObject var comms: OrganizationsController
     
@@ -22,10 +22,10 @@ struct CategoriesSelector: View {
                 .padding()
                 .navigationBarBackButtonHidden(true)
             if !isLoading {
-            ScrollView {
+                ScrollView(.vertical) {
             LazyVGrid(columns: [GridItem(.flexible(minimum: 25, maximum: 300), spacing: 0), GridItem(.flexible(minimum: 25, maximum: 300), spacing: 0)]) {
                 ForEach($comms.categories, id: \.self) { category in
-                    CategoryBox(title: category.wrappedValue)
+                    CategoryBox(title: category.wrappedValue, selectedCategories: $SelectedCategories)
                 }
             }
             }
@@ -33,7 +33,7 @@ struct CategoriesSelector: View {
             .padding()
             Spacer()
             
-            NavigationLink(destination: FavoriteClubsSelector()) {
+                NavigationLink(destination: FavoriteClubsSelector(selectedCategories: $SelectedCategories)) {
                 Text("Contiunue")
                     .font(.system(size: 25))
                     .frame(minWidth: 150)
@@ -45,14 +45,12 @@ struct CategoriesSelector: View {
             ProgressView()
         }
         }
-        .onAppear() {
-            comms.getCategories()
-        }
     }
 }
 
 struct CategoryBox: View {
     var title: String
+    @Binding var selectedCategories: [String]
     @State var isSelected: Bool = false
     
     var body: some View {
@@ -64,6 +62,9 @@ struct CategoryBox: View {
             .background(isSelected ? Color.accentColor : Color.clear)
             .onTapGesture {
                 isSelected.toggle()
+                if isSelected && selectedCategories.count < 3 {
+                    selectedCategories.append(self.title)
+                }
             }
             .overlay(
                 RoundedRectangle(cornerRadius: 20)

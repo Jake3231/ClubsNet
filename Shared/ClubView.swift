@@ -9,11 +9,11 @@ import SwiftUI
 
 struct ClubView: View {
     @EnvironmentObject var clubsController: OrganizationsController
-    @Binding var club: Organization
+    var club: Organization?
     
     var body: some View {
-        Text(club.name)
-            .navigationTitle(club.name)
+        Text(club?.name ?? "Name")
+            .navigationTitle(club?.name ?? "name")
             .toolbar() {
                 ToolbarItem {
                     Button(action: {print("favotire")}, label: {Image(systemName: "heart")})
